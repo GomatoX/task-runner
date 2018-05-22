@@ -31,6 +31,7 @@ class Logger {
       this.log(data, settings.label, settings.color);
     });
     ps.stderr.on('data', data => {
+      console.log('\x07');
       this.log(data, settings.label, '#E94F37');
     });
     ps.on('close', data => {
